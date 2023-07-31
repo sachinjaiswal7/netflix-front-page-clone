@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$bg-color : rgb(0, 0, 0);
+$gpt-color: #202123;
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    scrollbar-width: thin;
+}
+
+a{
+    
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 0.5s;
+    color: rgba(255, 255, 255, 0.758) ;
+}
+
+
+
+
+.container{
+    background-color: $bg-color;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    >svg{
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover{
+            color: rgb(169, 169, 169);
+        }
+    }
+    >div {
+       width: 100%;
+       
+    }
+    >div > a{
+        padding:  0 2vmax;
+        &:hover{
+            color: rgba(167, 167, 167, 0.758) ;
+        }
+    }
+  
+    >img {
+        height: 100%;
+    }
+}
+
+.options{
+    display: none;
+}
+.small-screen{
+    display: none;
+}
+.small-second-screen{
+    display: none;
+}
+
+
+@media screen and (max-width : 620px){
+    .big-screen{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+    .options{
+        display: block;
+    }
+    .small-second-screen{
+       
+        z-index: 20;
+        box-sizing: border-box;
+        height: 100%;
+        background-color: $gpt-color;
+        position: fixed;
+        right: 0;
+        width: 220px;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        border-radius: 5px;
+        >div{
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        >div > a{
+            padding: 10px;
+            margin-left: 10px;
+            border-bottom: 0.1px solid white ;
+            
+        }
+        >svg{
+            font-size: 20px;
+            position: absolute;
+            margin-bottom: 10px;
+            right: 10px;
+            top: 10px;
+        }
+    }
+
+   
+}
+
+
