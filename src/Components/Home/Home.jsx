@@ -54,7 +54,7 @@ const Home = () => {
       headers: {
         Accept: "application/json",
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3Y2Y1OThkYjE4YjAxMjMwMzNkM2U2ZTliMTdmYzYzNiIsInN1YiI6IjY0YmQyM2QyZWI3OWMyMDBmZjlkNDQwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nH6T3y51UY0LhEHeClS5hh6B2cbYkV5dugjCmg5Y7Q0",
+          `Bearer ${process.env.REACT_APP_BR}`,
       },
     };
     // fetching the data of upcoming movies
